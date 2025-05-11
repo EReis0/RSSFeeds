@@ -87,19 +87,29 @@ You can specify filter variables (such as `subscription`, `catdesc`, `name`, or 
 For example, in `SearchDB.py`:
 
 ```python
+# Query the database with optional parameters:
 if __name__ == "__main__":
-    db_path = 'D:\\Code\\Not Repo\\RSSFeeds\\rssfeeds.db'
-    sql_path = 'D:\\Code\\Not Repo\\RSSFeeds\\SearchDB.sql'
-    subscription = 'No'      # 'Yes' or 'No'
-    catdesc = 'News'         # 'Other', 'News', or 'Sports'
-    name = 'Fox'             # Any part of the feed name (optional)
-    id = 10                  # Exact ID (optional)
+    # Get the directory where this script is located
+    base_dir = Path(__file__).parent
+
+    # Build paths relative to the script location
+    db_path = base_dir / 'rssfeeds.db'
+    sql_path = base_dir / 'SearchDB.sql'
+
+    # Parameters for the search
+    subscription = ''
+    catdesc = ''
+    name = ''
+    id = None
 
     try:
         DBresults = searchDB(db_path, sql_path, subscription, catdesc, name, id)
         print(DBresults)
     except Exception as e:
         print(f"Error: {e}")
+
+# Total number of records returned
+    print(f"\033[92mRecord Count: {len(DBresults)}\033[0m")
 ```
 
 **Tip:**  
