@@ -52,7 +52,7 @@ sudo apt install sqlite3
       source env/bin/activate
       ```
 
-4. Install dependencies (if you add any to `requirements.txt`):
+4. Install dependencies (No Current Requirements):
 
     ```bash
     pip install -r requirements.txt
