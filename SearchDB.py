@@ -72,7 +72,7 @@ if __name__ == "__main__":
     subscription = ''
     catdesc = ''
     name = ''
-    id = 10
+    id = None
 
     try:
         DBresults = searchDB(db_path, sql_path, subscription, catdesc, name, id)
