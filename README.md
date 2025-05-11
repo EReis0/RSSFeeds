@@ -131,7 +131,7 @@ python SearchDB.py --subscription No --catdesc News --name Fox --id 10
 
 ## Notes
 
-- You can modify the SQL queries in the `.sql` files to change what data is returned.
+- You can modify the SQL queries in `SearchDB.sql` file to change what data is returned.
 - Update the script parameters to filter results as needed.
 
 ---
